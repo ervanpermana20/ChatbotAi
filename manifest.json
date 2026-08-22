@@ -1,0 +1,17 @@
+{
+  "name": "EP Labs AI",
+  "short_name": "EP Labs AI",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#080b14",
+  "theme_color": "#080b14",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzIwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMyMCIgZmlsbD0iIzA4MGIxNCIvPjxnIHN0cm9rZT0iI2VlZjBmNyIgc3Ryb2tlLXdpZHRoPSIxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48Y2lyY2xlIGN4PSIyMTAiIGN5PSIxMjAiIHI9IjU1Ii8+PGNpcmNsZSBjeD0iMjkwIiBjeT0iMTIwIiByPSI1NSIvPjwvZz48dGV4dCB4PSIyNTAiIHk9IjIzNSIgZmlsbD0iI2VlZjBmNyIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDYiIGZvbnQtd2VpZ2h0PSI4MDAiIGxldHRlci1zcGFjaW5nPSIxMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RVA8L3RleHQ+PC9zdmc+",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
