@@ -1,7 +1,8 @@
 {
   "name": "Ervan Ai",
   "short_name": "Ervan Ai",
-  "start_url": "./chatbot-pribadi.html",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#080b14",
   "theme_color": "#080b14",

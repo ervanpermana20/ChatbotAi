@@ -433,14 +433,13 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
     </button>
     <svg class="brand-logo" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
-      <g stroke="#eef0f7" stroke-width="16" fill="none" stroke-linecap="round">
-        <circle cx="210" cy="120" r="55" />
-        <circle cx="290" cy="120" r="55" />
+      <g stroke="#eef0f7" stroke-width="18" fill="none" stroke-linecap="round">
+        <circle cx="210" cy="160" r="70" />
+        <circle cx="290" cy="160" r="70" />
       </g>
-      <text x="250" y="235" fill="#eef0f7" font-family="Inter, sans-serif" font-size="46" font-weight="800" letter-spacing="10" text-anchor="middle">EP</text>
     </svg>
     <div class="brand-text">
-      <div class="brand-title">EP Labs</div>
+      <div class="brand-title">Ervan Ai</div>
       <div class="brand-sub"><span class="status-dot" id="statusDot"></span><span id="brandSub">belum terhubung</span></div>
     </div>
   </div>
@@ -457,13 +456,12 @@
 <div id="messages">
   <div class="empty-state" id="emptyState">
     <svg class="glyph" viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
-      <g stroke="#eef0f7" stroke-width="14" fill="none" stroke-linecap="round">
-        <circle cx="210" cy="120" r="55" />
-        <circle cx="290" cy="120" r="55" />
+      <g stroke="#eef0f7" stroke-width="16" fill="none" stroke-linecap="round">
+        <circle cx="210" cy="160" r="70" />
+        <circle cx="290" cy="160" r="70" />
       </g>
-      <text x="250" y="235" fill="#eef0f7" font-family="Inter, sans-serif" font-size="46" font-weight="800" letter-spacing="10" text-anchor="middle">EP</text>
     </svg>
-    <div class="ename">EP Labs</div>
+    <div class="ename">Ervan Ai</div>
     <p>Belum ada obrolan.<br>Ketuk ikon pengaturan buat masukin API key Gemini kamu, baru mulai ngobrol.</p>
   </div>
 </div>
@@ -730,7 +728,11 @@
     const body = {
       system_instruction: { parts: [{ text: buildSystemPrompt() }] },
       contents: contents,
-      generationConfig: { temperature: 0.9, maxOutputTokens: 800 }
+      generationConfig: {
+        temperature: 0.9,
+        maxOutputTokens: 800,
+        thinkingConfig: { thinkingLevel: 'low' }
+      }
     };
 
     const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`, {
@@ -767,7 +769,11 @@ Jika TIDAK ADA fakta baru yang layak dicatat, balas HANYA dengan kata: NONE`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.2, maxOutputTokens: 60 }
+          generationConfig: {
+            temperature: 0.2,
+            maxOutputTokens: 60,
+            thinkingConfig: { thinkingLevel: 'low' }
+          }
         })
       });
       if(!res.ok) return;
